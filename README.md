@@ -25,6 +25,17 @@ Upon further examination of the data, it becomes apparent that there are distinc
 Two machine learning models, Artificial Neural Network (ANN) and Long Short-Term Memory (LSTM), are utilized and implemented to extract valuable information from the identical data present in the dataset. 
 
 ## Models
+### XGBoost
+short for Extreme Gradient Boosting, builds on the foundations of gradient boosting, incorporating regularization terms to control model complexity and prevent overfitting. One of the key features of XGBoost is its ability to handle sparse data, making it particularly well-suited for datasets with missing values or high-dimensional feature spaces. 
+
+### CATBoost
+is a cutting-edge gradient boosting algorithm specifically designed to handle categorical features without the need for extensive preprocessing. Additionally, CatBoost employs an ordered boosting technique to combat overfitting, enabling it to achieve excellent performance even in cases where the dataset has a high degree of noise.
+
+### LightGBM
+, or Light Gradient Boosting Machine, introduces gradient-based one-side sampling (GOSS), which selectively samples instances for gradient updates based on their gradients, allowing the algorithm to focus on more informative instances while maintaining accuracy. Another notable feature of LightGBM is exclusive feature bundling (EFB), which groups mutually exclusive features together, reducing the dimensionality of the feature space and lowering memory usage.
+
+### Ensemble method
+We further explore and experiment with ensemble method by using the results of Random Forest, XGBoost, LightGBM to obtain better predictive performance.The ensemble of these three models represents the best combination we obtained during the experiment. Each model was given the likelihood of the damage grade and then sum up likelihood with weights to pick the most likely one.
 
 ## Results
 ![1687219732047](https://github.com/1eom3i/Earthquake-damage-predictor/assets/124229472/d3a97576-9e51-4adb-b778-cf939f66f419)
