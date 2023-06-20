@@ -19,3 +19,12 @@ The dataset mainly consists of information on the buildings' structure and their
 There are 39 columns in this dataset, where the building_id column is a unique and random identifier. The remaining 38 features are described in the section below. Categorical variables have been obfuscated random lowercase ascii characters. The appearance of the same character in distinct columns does not imply the same original value.
 
 ## Feature Engineering
+In the dataset provided, the geographic region of each building is represented by three features: \texttt{geo\_level\_1\_id}, \texttt{geo\_level\_2\_id}, and \texttt{geo\_level\_3\_id}. These integer values describe the hierarchical structure of the regions, ranging from the largest (level 1) to the most specific sub-region (level 3). The possible values for each level are as follows: level 1 ranges from 0 to 30, level 2 from 0 to 1427, and level 3 from 0 to 12567.
+
+Upon further examination of the data, it becomes apparent that there are distinct relationships between these three levels of geographic regions. \texttt{Geo\_level\_3\_id} represents the smallest scale location, nested within the areas defined by \texttt{geo\_level\_2\_id}, which in turn are contained within the larger regions represented by \texttt{geo\_level\_1\_id}. Consequently, for any given combination of \texttt{geo\_level\_1\_id} and \texttt{geo\_level\_2\_id} values, there are multiple instances of the same\texttt{geo\_level\_3\_id} value. This observation suggests a hierarchical organization of locations, with smaller sub-regions grouped under larger regions.
+Two machine learning models, Artificial Neural Network (ANN) and Long Short-Term Memory (LSTM), are utilized and implemented to extract valuable information from the identical data present in the dataset. 
+
+## Models
+
+## Results
+![1687219732047](https://github.com/1eom3i/Earthquake-damage-predictor/assets/124229472/d3a97576-9e51-4adb-b778-cf939f66f419)
