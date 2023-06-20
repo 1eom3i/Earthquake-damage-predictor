@@ -1,5 +1,12 @@
 # Earthquake-damage-predictor
 
+## Run
+ How to run the code
+1. Before running the code, please ensure that the raw data file, submission_format.csv file, and the code file are placed in the same folder.  
+2. To train and save the model, create a new folder named "models" in the same directory.  
+3. Before running the code, make sure that the necessary libraries for the program are installed,e.g., numpy, pandas, scikit-learn, lightgbm, etc.  
+4. Run all code cells. (Cells below “Catboost” do not need to be run.)  
+   
 ## Problem Description
 We're trying to predict the ordinal variable damage_grade, which represents a level of damage to the building that was hit by the earthquake. There are 3 grades of the damage:
 
